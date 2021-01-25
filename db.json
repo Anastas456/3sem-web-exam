@@ -27,18 +27,18 @@
     {
       "name": "aeh",
       "amount": 23,
-      "status": false,
+      "status": true,
       "id": 5
     },
     {
       "name": "sdcsdc",
       "amount": 242,
-      "status": false,
+      "status": true,
       "id": 6
     },
     {
-      "name": "green",
-      "amount": 45,
+      "name": "рп",
+      "amount": 64,
       "status": false,
       "id": 7
     }

@@ -29,10 +29,18 @@ export class ProductListComponent implements OnInit {
     }
   }
 
-  // onChangeStatus(status){
-  //   let newStatus= !status;
-  //   console.log('status: '+newStatus);
-  // }
+  async onChangeStatus(id:number){
+    this.products.find(product => product.id ===id).status=!this.products.find(product => product.id ===id).status;
+    try{
+      await this.productService.putOneById(id, this.products.find(product => product.id === id));
+
+    }
+    catch(err){
+      console.error(err);
+    }
+
+    
+  }
 
   onAddProfile(){
     this.router.navigate([this.router.url, 'profile']);

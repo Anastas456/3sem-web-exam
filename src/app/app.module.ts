@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { MainComponent } from './main/main.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

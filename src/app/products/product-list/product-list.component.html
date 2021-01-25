@@ -14,6 +14,7 @@
         </tr>
       </thead>
       <tbody>
+        
         <tr *ngFor="let product of products">
           <ng-container *ngIf="product.status===false; else elseTemplate">
             <th scope="row" class="bg-success text-light">{{product.id}}</th>
@@ -28,11 +29,9 @@
             <td>{{product.status}}</td>
           </ng-template>
           
-          
-  
           <td class="text-right">
             <button class="btn btn-primary mr-3"
-              >
+              (click)="onChangeStatus(product.id)">
                   Изменить статус
               </button>
               <button class="btn btn-primary mr-3"
