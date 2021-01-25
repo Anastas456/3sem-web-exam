@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Яблоко",
+      "amount": 3,
+      "status":false
+    },
+    {
+      "id": 2,
+      "name": "Апельсин",
+      "amount": 6,
+      "status":true
+    },
+    {
+      "id": 3,
+      "name": "Виноград",
+      "amount": 15,
+      "status":true
+    },
+    {
+      "id": 4,
+      "name": "Персик",
+      "amount": 2,
+      "status":false
+    }
+  ]
+}
