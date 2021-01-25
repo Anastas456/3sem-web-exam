@@ -3,7 +3,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductModel } from 'src/app/shared/models/product.model';
 import { ProductServiceService } from 'src/app/shared/services/product-service.service';
-import { ProductsModule } from '../products.module';
 
 @Component({
   selector: 'app-product-edit',

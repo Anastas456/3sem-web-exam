@@ -33,12 +33,11 @@ export class ProductListComponent implements OnInit {
     this.products.find(product => product.id ===id).status=!this.products.find(product => product.id ===id).status;
     try{
       await this.productService.putOneById(id, this.products.find(product => product.id === id));
-
+      this.getData();
     }
     catch(err){
       console.error(err);
     }
-
     
   }
 
