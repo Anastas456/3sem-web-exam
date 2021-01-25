@@ -1,1 +1,31 @@
-<p>product-edit works!</p>
+<div class="container-fluid">
+    <h3>Добавление и редактирование записей</h3>
+    <form [formGroup]="productForm">
+        <div class="form-group">
+        <label for="name">Название</label>
+        <input type="text" class="form-control" id="name" placeholder="Введите название"
+        formControlName="name">
+        <div class="alert alert-danger" 
+            *ngIf="productForm.controls['name'].invalid && productForm.controls['name'].touched">
+                Не указано название
+            </div>
+        </div>
+        <div class="form-group">
+        <label for="amount">Количество</label>
+        <input type="number" class="form-control" id="amount" placeholder="Введите количество"
+        formControlName="amount">
+        <div class="alert alert-danger" 
+            *ngIf="productForm.controls['amount'].invalid && productForm.controls['amount'].touched">
+                Не указано количество
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary"
+        [disabled]="productForm.invalid"
+        (click)="onSave()"
+        >Сохранить</button>
+        <button class="btn btn-danger ml-3" 
+        *ngIf="id != null" 
+        (click)="onDelete()">Удалить</button>
+    </form>
+</div>
