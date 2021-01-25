@@ -10,13 +10,13 @@
       "id": 2,
       "name": "Апельсин",
       "amount": 6,
-      "status": false
+      "status": true
     },
     {
       "id": 3,
       "name": "Виноград",
       "amount": 15,
-      "status": true
+      "status": false
     },
     {
       "id": 4,
@@ -39,13 +39,13 @@
     {
       "name": "Редис",
       "amount": 64,
-      "status": true,
+      "status": false,
       "id": 7
     },
     {
-      "name": "аАк",
+      "name": "абрикос",
       "amount": 23,
-      "status": false,
+      "status": true,
       "id": 8
     }
   ]

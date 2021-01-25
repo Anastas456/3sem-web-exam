@@ -1,43 +1,57 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Название</th>
-      <th scope="col">Количество</th>
-      <!-- <th scope="col">Статус</th> -->
-      <th scope="col" class="text-right">
-        <button class="btn btn-outline-primary"
-          (click)="onAddProfile()">
-            Добавить запись
-        </button>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let product of products | sortPurchased:products">
-      <ng-container *ngIf="product.status===false; else elseTemplate">
-        <th scope="row" class="bg-success text-light">{{product.id}}</th>
-        <td class="bg-success text-light">{{product.name}}</td>
-        <td class="bg-success text-light">{{product.amount}}</td>
-        <!-- <td class="bg-success text-light">{{product.status}}</td> -->
-      </ng-container>
-      <ng-template #elseTemplate>
-        <th scope="row">{{product.id}}</th>
-        <td>{{product.name}}</td>
-        <td>{{product.amount}}</td>
-        <!-- <td>{{product.status}}</td> -->
-      </ng-template>
-          
-      <td class="text-right">
-        <button class="btn btn-outline-primary mr-3"
-          (click)="onChangeStatus(product.id)">
-            Изменить статус
-        </button>
-        <button class="btn btn-outline-primary mr-3"
-          (click)="onLinkProfile(product.id)">
-            Редактировать
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="container-fluid"> 
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Название</th>
+        <th scope="col">Количество</th>
+        <!-- <th scope="col">Статус</th> -->
+        <th scope="col" class="text-right">
+          <button class="btn btn-outline-primary"
+            (click)="onAddProfile()">
+              Добавить запись
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products | sortPurchased:products">
+        <ng-container *ngIf="product.status===false; else elseTemplate">
+          <th scope="row" class="bg-success text-light">{{product.id}}</th>
+          <td class="bg-success text-light">{{product.name}}</td>
+          <td class="bg-success text-light">{{product.amount}}</td>
+          <!-- <td class="bg-success text-light">{{product.status}}</td> -->
+
+          <td class="text-right bg-success">
+            <button class="btn btn-primary mr-3"
+              (click)="onChangeStatus(product.id)">
+                Изменить статус
+            </button>
+            <button class="btn btn-primary mr-3"
+              (click)="onLinkProfile(product.id)">
+                Редактировать
+            </button>
+          </td>
+        </ng-container>
+        <ng-template #elseTemplate>
+          <th scope="row">{{product.id}}</th>
+          <td>{{product.name}}</td>
+          <td>{{product.amount}}</td>
+
+          <td class="text-right">
+            <button class="btn btn-outline-primary mr-3"
+              (click)="onChangeStatus(product.id)">
+                Изменить статус
+            </button>
+            <button class="btn btn-outline-primary mr-3"
+              (click)="onLinkProfile(product.id)">
+                Редактировать
+            </button>
+          </td>
+          <!-- <td>{{product.status}}</td> -->
+        </ng-template>
+
+      </tr>
+    </tbody>
+  </table>
+</div> 
